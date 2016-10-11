@@ -1,5 +1,8 @@
 package net.chiappone.util.security.exceptions;
 
+/**
+ * @author Kurtis Chiappone
+ */
 public class HashException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
@@ -10,28 +13,18 @@ public class HashException extends RuntimeException {
 
     }
 
-    /**
-     * @param message
-     * @param cause
-     */
     public HashException( String message, Throwable cause ) {
 
         super( message, cause );
 
     }
 
-    /**
-     * @param message
-     */
     public HashException( String message ) {
 
         super( message );
 
     }
 
-    /**
-     * @param cause
-     */
     public HashException( Throwable cause ) {
 
         super( cause );

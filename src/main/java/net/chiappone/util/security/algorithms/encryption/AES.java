@@ -8,29 +8,19 @@ import javax.crypto.spec.SecretKeySpec;
 import java.security.InvalidKeyException;
 
 /**
- * Implements AES-128, AES-192, and AES-256 bit encryption and decryption.<br/>
- * <br/>
- * Note that by default, the JRE only supports AES-128 bit encryption and
- * special JARs are required for AES-192 and AES-256 bit encryption.
+ * Implements AES-128, AES-192, and AES-256 bit encryption and decryption. Note that by default, the JRE only supports
+ * AES-128 bit encryption and special JARs are required for AES-192 and AES-256 bit encryption.
+ *
+ * @author Kurtis Chiappone
  */
 public class AES extends AbstractEncryptionAlgorithm<byte[]> {
 
-    /**
-     * @param algorithm
-     */
     public AES( Algorithm algorithm ) {
 
         super( algorithm );
 
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * EncryptionAlgorithm#decrypt
-     * (java.lang.Object, byte[])
-     */
     public byte[] decrypt( byte[] encrypted, byte[] key ) {
 
         SecretKeySpec keySpec = new SecretKeySpec( key, getAlgorithm().getInstanceName() );
@@ -53,13 +43,6 @@ public class AES extends AbstractEncryptionAlgorithm<byte[]> {
 
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * EncryptionAlgorithm#encrypt
-     * (java.lang.Object, byte[])
-     */
     public byte[] encrypt( byte[] data, byte[] key ) {
 
         SecretKeySpec keySpec = new SecretKeySpec( key, getAlgorithm().getInstanceName() );

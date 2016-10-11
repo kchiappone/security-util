@@ -16,15 +16,13 @@ import java.util.List;
  * <li>AES-256</li>
  * <li>DESede</li>
  * </ol>
+ *
+ * @author Kurtis Chiappone
  */
 public class ByteCrypter extends AbstractCrypter<byte[]> {
 
     private List<Algorithm> algorithms = null;
 
-    /**
-     * @param algorithm
-     * @return
-     */
     @Override public EncryptionAlgorithm<byte[]> getAlgorithmInstance( Algorithm algorithm ) {
 
         switch ( algorithm ) {
@@ -46,9 +44,6 @@ public class ByteCrypter extends AbstractCrypter<byte[]> {
 
     }
 
-    /**
-     * @return
-     */
     @Override public List<Algorithm> getSupportedAlgorithms() {
 
         if ( algorithms == null ) {

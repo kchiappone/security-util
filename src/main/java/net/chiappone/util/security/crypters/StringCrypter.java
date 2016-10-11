@@ -7,18 +7,12 @@ import org.apache.commons.codec.binary.Hex;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Encrypts/decrypts strings.
- * <p>
- * Note that before encryption/decryption, Strings are encoded/decoded to/from
- * Hex.
+ * Encrypts/decrypts strings. Note that before encryption/decryption, Strings are encoded/decoded to/from ex.
+ *
+ * @author Kurtis Chiappone
  */
 public class StringCrypter implements Crypter<String> {
 
-    /**
-     * @param encrypted
-     * @param key
-     * @return
-     */
     public String decrypt( String encrypted, KeyHolder key ) {
 
         try {
@@ -35,11 +29,6 @@ public class StringCrypter implements Crypter<String> {
 
     }
 
-    /**
-     * @param data
-     * @param key
-     * @return
-     */
     public String encrypt( String data, KeyHolder key ) {
 
         try {

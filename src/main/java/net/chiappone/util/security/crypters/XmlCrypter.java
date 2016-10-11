@@ -11,18 +11,11 @@ import java.util.List;
 
 /**
  * Encrypts/decrypts XML node values based upon the tag(s) passed in.
- * <p>
- * <strong>NOTE:</strong> If you wish to encrypt/decrypt the whole XML as
- * opposed to specific tags, use StringCrypter instead.
+ *
+ * @author Kurtis Chiappone
  */
 public class XmlCrypter extends StringCrypter {
 
-    /**
-     * @param xml
-     * @param key
-     * @param tags
-     * @return
-     */
     public String decrypt( String xml, KeyHolder key, List<String> tags ) {
 
         if ( xml == null || tags == null || xml.length() <= 0 || tags.size() <= 0 ) {
@@ -57,12 +50,6 @@ public class XmlCrypter extends StringCrypter {
 
     }
 
-    /**
-     * @param xml
-     * @param key
-     * @param tag
-     * @return
-     */
     public String decrypt( String xml, KeyHolder key, String tag ) {
 
         if ( xml == null || tag == null || xml.length() <= 0 || tag.length() <= 0 ) {
@@ -93,12 +80,6 @@ public class XmlCrypter extends StringCrypter {
 
     }
 
-    /**
-     * @param xml
-     * @param key
-     * @param tags
-     * @return
-     */
     public String encrypt( String xml, KeyHolder key, List<String> tags ) {
 
         if ( xml == null || tags == null || xml.length() <= 0 || tags.size() <= 0 ) {
@@ -133,12 +114,6 @@ public class XmlCrypter extends StringCrypter {
 
     }
 
-    /**
-     * @param xml
-     * @param key
-     * @param tag
-     * @return
-     */
     public String encrypt( String xml, KeyHolder key, String tag ) {
 
         if ( xml == null || tag == null || xml.length() <= 0 || tag.length() <= 0 ) {

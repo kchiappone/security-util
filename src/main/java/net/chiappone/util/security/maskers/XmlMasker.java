@@ -13,6 +13,8 @@ import java.util.Map.Entry;
  * Masks XML node values based upon either the start/end indices, or by passing
  * in a tag (or multiple tags) and masker(s) which "knows" how to mask the tag
  * type.
+ *
+ * @author Kurtis Chiappone
  */
 public class XmlMasker extends StringMasker {
 
@@ -22,41 +24,24 @@ public class XmlMasker extends StringMasker {
 
     }
 
-    /**
-     * @param mask
-     * @param startIndex
-     * @param endIndex
-     */
     public XmlMasker( char mask, int startIndex, int endIndex ) {
 
         super( mask, startIndex, endIndex );
 
     }
 
-    /**
-     * @param startIndex
-     */
     public XmlMasker( int startIndex ) {
 
         super( startIndex );
 
     }
 
-    /**
-     * @param startIndex
-     * @param endIndex
-     */
     public XmlMasker( int startIndex, int endIndex ) {
 
         super( startIndex, endIndex );
 
     }
 
-    /**
-     * @param map
-     * @param xml
-     * @return
-     */
     public String mask( Map<String, Masker<String>> map, String xml ) {
 
         if ( xml == null || map == null || xml.length() <= 0 || map.size() <= 0 ) {
@@ -94,12 +79,6 @@ public class XmlMasker extends StringMasker {
 
     }
 
-    /**
-     * @param masker
-     * @param xml
-     * @param tag
-     * @return
-     */
     public String mask( Masker<String> masker, String xml, String tag ) {
 
         if ( xml == null || tag == null || xml.length() <= 0 || tag.length() <= 0 ) {
@@ -130,11 +109,6 @@ public class XmlMasker extends StringMasker {
 
     }
 
-    /**
-     * @param xml
-     * @param tag
-     * @return
-     */
     public String mask( String xml, String tag ) {
 
         return mask( this, xml, tag );

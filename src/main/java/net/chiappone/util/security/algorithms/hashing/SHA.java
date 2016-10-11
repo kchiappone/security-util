@@ -8,25 +8,17 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * Implements the SHA hash algorithm.
+ *
+ * @author Kurtis Chiappone
  */
 public class SHA extends AbstractHashAlgorithm<byte[]> {
 
-    /**
-     * @param algorithm
-     */
     public SHA( Algorithm algorithm ) {
 
         super( algorithm );
 
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * HashAlgorithm#hash(java.lang.Object
-     * )
-     */
     public byte[] hash( byte[] data ) {
 
         MessageDigest md = null;

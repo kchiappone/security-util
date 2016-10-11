@@ -9,7 +9,6 @@ import static org.junit.Assert.assertTrue;
 
 /**
  * @author Kurtis Chiappone
- * @date 10/10/2016
  */
 public class StringCrypterTest {
 

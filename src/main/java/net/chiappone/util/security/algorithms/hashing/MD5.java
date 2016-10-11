@@ -8,16 +8,11 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * Implements the MD5 hash algorithm.
+ *
+ * @author Kurtis Chiappone
  */
 public class MD5 implements HashAlgorithm<byte[]> {
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * HashAlgorithm#hash(java.lang.Object
-     * )
-     */
     public byte[] hash( byte[] data ) {
 
         MessageDigest md = null;

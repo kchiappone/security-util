@@ -13,6 +13,8 @@ import java.util.Map.Entry;
  * Truncates XML node values based upon either the start/end indices, or by
  * passing in a tag (or multiple tags) and truncater(s) which "knows" how to
  * truncate the tag type.
+ *
+ * @author Kurtis Chiappone
  */
 public class XmlTruncater extends StringTruncater {
 
@@ -22,42 +24,24 @@ public class XmlTruncater extends StringTruncater {
 
     }
 
-    /**
-     * @param startIndex
-     */
     public XmlTruncater( int startIndex ) {
 
         super( startIndex );
 
     }
 
-    /**
-     * @param startIndex
-     * @param endIndex
-     */
     public XmlTruncater( int startIndex, int endIndex ) {
 
         super( startIndex, endIndex );
 
     }
 
-    /**
-     * @param xml
-     * @param tag
-     * @return
-     */
     public String truncate( String xml, String tag ) {
 
         return truncate( this, xml, tag );
 
     }
 
-    /**
-     * @param truncater
-     * @param xml
-     * @param tag
-     * @return
-     */
     public String truncate( Truncater<String> truncater, String xml, String tag ) {
 
         if ( xml == null || tag == null || xml.length() <= 0 || tag.length() <= 0 ) {
@@ -88,11 +72,6 @@ public class XmlTruncater extends StringTruncater {
 
     }
 
-    /**
-     * @param map
-     * @param xml
-     * @return
-     */
     public String truncate( Map<String, Truncater<String>> map, String xml ) {
 
         if ( xml == null || map == null || xml.length() <= 0 || map.size() <= 0 ) {

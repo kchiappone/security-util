@@ -11,15 +11,11 @@ import java.util.List;
 
 /**
  * Hashes XML node values based on the tag(s) passed in.
+ *
+ * @author Kurtis Chiappone
  */
 public class XmlHasher extends StringHasher {
 
-    /**
-     * @param algorithm
-     * @param xml
-     * @param tags
-     * @return
-     */
     public String hash( Algorithm algorithm, String xml, List<String> tags ) {
 
         if ( xml == null || tags == null || xml.length() <= 0 || tags.size() <= 0 ) {
@@ -54,12 +50,6 @@ public class XmlHasher extends StringHasher {
 
     }
 
-    /**
-     * @param algorithm
-     * @param xml
-     * @param tag
-     * @return
-     */
     public String hash( Algorithm algorithm, String xml, String tag ) {
 
         if ( xml == null || tag == null || xml.length() <= 0 || tag.length() <= 0 ) {

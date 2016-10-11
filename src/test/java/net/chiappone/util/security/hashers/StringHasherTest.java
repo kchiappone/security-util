@@ -9,7 +9,6 @@ import static org.junit.Assert.assertFalse;
 
 /**
  * @author Kurtis Chiappone
- * @date 10/11/2016
  */
 public class StringHasherTest {
 

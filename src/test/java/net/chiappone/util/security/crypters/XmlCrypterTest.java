@@ -10,7 +10,6 @@ import static org.junit.Assert.assertTrue;
 
 /**
  * @author Kurtis Chiappone
- * @date 10/11/2016
  */
 public class XmlCrypterTest {
 

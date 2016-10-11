@@ -5,11 +5,11 @@ package net.chiappone.util.security.maskers;
  * index. If the <code>end</code> is unspecified, the String will be masked by
  * <code>start</code> to <code>length() - 1</code>. If the <code>start</code>
  * and <code>end</code> are both unspecified, the entire length of the String
- * will be masked. The default mask is a '<code>*</code>' char. <br/>
- * <br />
- * <p>
+ * will be masked. The default mask is a '<code>*</code>' char. <br><br>
  * Note that String positions start at index zero and end at index
  * <code>length() - 1</code>.
+ *
+ * @author Kurtis Chiappone
  */
 public class StringMasker implements Masker<String> {
 
@@ -21,11 +21,6 @@ public class StringMasker implements Masker<String> {
 
     }
 
-    /**
-     * @param mask
-     * @param startIndex
-     * @param endIndex
-     */
     public StringMasker( char mask, int startIndex, int endIndex ) {
 
         this.mask = mask;
@@ -33,77 +28,48 @@ public class StringMasker implements Masker<String> {
         this.endIndex = endIndex;
     }
 
-    /**
-     * @param startIndex
-     */
     public StringMasker( int startIndex ) {
 
         this.startIndex = startIndex;
 
     }
 
-    /**
-     * @param startIndex
-     * @param endIndex
-     */
     public StringMasker( int startIndex, int endIndex ) {
 
         this.startIndex = startIndex;
         this.endIndex = endIndex;
     }
 
-    /**
-     * @return the endIndex
-     */
     public final int getEndIndex() {
 
         return endIndex;
     }
 
-    /**
-     * @param endIndex the endIndex to set
-     */
     public final void setEndIndex( int endIndex ) {
 
         this.endIndex = endIndex;
     }
 
-    /**
-     * @return the mask
-     */
     public final char getMask() {
 
         return mask;
     }
 
-    /**
-     * @param mask the mask to set
-     */
     public final void setMask( char mask ) {
 
         this.mask = mask;
     }
 
-    /**
-     * @return the startIndex
-     */
     public final int getStartIndex() {
 
         return startIndex;
     }
 
-    /**
-     * @param startIndex the startIndex to set
-     */
     public final void setStartIndex( int startIndex ) {
 
         this.startIndex = startIndex;
     }
 
-    /**
-     * @param data
-     * @return
-     */
     public String mask( String data ) {
 
         // User did not specify a start index

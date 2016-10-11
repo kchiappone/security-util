@@ -17,15 +17,13 @@ import java.util.List;
  * <li>SHA-384</li>
  * <li>SHA-512</li>
  * </ol>
+ *
+ * @author Kurtis Chiappone
  */
 public class ByteHasher extends AbstractHasher<byte[]> {
 
     private List<Algorithm> algorithms = null;
 
-    /**
-     * @param algorithm
-     * @return
-     */
     @Override public HashAlgorithm<byte[]> getAlgorithmInstance( Algorithm algorithm ) {
 
         switch ( algorithm ) {
@@ -48,9 +46,6 @@ public class ByteHasher extends AbstractHasher<byte[]> {
 
     }
 
-    /**
-     * @return
-     */
     @Override public List<Algorithm> getSupportedAlgorithms() {
 
         if ( algorithms == null ) {

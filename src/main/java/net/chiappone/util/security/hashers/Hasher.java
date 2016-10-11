@@ -4,14 +4,11 @@ import net.chiappone.util.security.algorithms.Algorithm;
 
 /**
  * Interface which all Hashers must implement.
+ *
+ * @author Kurtis Chiappone
  */
 public interface Hasher<E> {
 
-    /**
-     * @param algorithm
-     * @param data
-     * @return
-     */
     public E hash( Algorithm algorithm, E data );
 
 }

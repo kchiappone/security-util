@@ -2,6 +2,8 @@ package net.chiappone.util.security.algorithms;
 
 /**
  * Enum which defines the types of algorithms used for encryption and hashing.
+ *
+ * @author Kurtis Chiappone
  */
 public enum Algorithm {
 
@@ -13,11 +15,6 @@ public enum Algorithm {
     private String instanceName = null;
     private int bits = 0;
 
-    /**
-     * @param value
-     * @param instanceName
-     * @param bits
-     */
     Algorithm( String value, String instanceName, int bits ) {
 
         this.value = value;
@@ -26,27 +23,18 @@ public enum Algorithm {
 
     }
 
-    /**
-     * @return
-     */
     public String getValue() {
 
         return value;
 
     }
 
-    /**
-     * @return
-     */
     public String getInstanceName() {
 
         return instanceName;
 
     }
 
-    /**
-     * @return
-     */
     public int getBits() {
 
         return bits;

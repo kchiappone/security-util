@@ -3,11 +3,11 @@ package net.chiappone.util.security.truncaters;
 /**
  * Truncates a String using the specified <code>start</code> and
  * <code>end</code> index. This class uses {@link String#substring(int)} and
- * {@link String#substring(int, int)}. <br/>
- * <br />
- * <p>
+ * {@link String#substring(int, int)}. <br><br>
  * Note that String positions start at index zero and end at index
  * <code>length() - 1</code>.
+ *
+ * @author Kurtis Chiappone
  */
 public class StringTruncater implements Truncater<String> {
 
@@ -18,19 +18,12 @@ public class StringTruncater implements Truncater<String> {
 
     }
 
-    /**
-     * @param startIndex
-     */
     public StringTruncater( int startIndex ) {
 
         this.startIndex = startIndex;
 
     }
 
-    /**
-     * @param startIndex
-     * @param endIndex
-     */
     public StringTruncater( int startIndex, int endIndex ) {
 
         this.startIndex = startIndex;
@@ -38,50 +31,31 @@ public class StringTruncater implements Truncater<String> {
 
     }
 
-    /**
-     * @return the endIndex
-     */
     public final int getEndIndex() {
 
         return endIndex;
     }
 
-    /**
-     * @param index the truncateLength to set
-     */
     public final void setEndIndex( int index ) {
 
         this.endIndex = index;
     }
 
-    /**
-     * @return the startIndex
-     */
     public final int getStartIndex() {
 
         return startIndex;
     }
 
-    /**
-     * @param index the startIndex to set
-     */
     public final void setStartIndex( int index ) {
 
         this.startIndex = index;
     }
 
-    /**
-     * @return the truncateLength
-     */
     public final int getTruncateLength() {
 
         return endIndex;
     }
 
-    /**
-     * @param data
-     * @return
-     */
     public String truncate( String data ) {
 
         String str;

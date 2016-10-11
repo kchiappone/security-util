@@ -8,18 +8,13 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * Implements DESede encryption and decryption.
+ *
+ * @author Kurtis Chiappone
  */
 public class DESede implements EncryptionAlgorithm<byte[]> {
 
     private static final String INSTANCE_NAME = Algorithm.DESEDE.getInstanceName();
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * EncryptionAlgorithm#decrypt
-     * (java.lang.Object, byte[])
-     */
     public byte[] decrypt( byte[] encrypted, byte[] key ) {
 
         SecretKeySpec keySpec = new SecretKeySpec( key, INSTANCE_NAME );
@@ -42,13 +37,6 @@ public class DESede implements EncryptionAlgorithm<byte[]> {
 
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * EncryptionAlgorithm#encrypt
-     * (java.lang.Object, byte[])
-     */
     public byte[] encrypt( byte[] data, byte[] key ) {
 
         SecretKeySpec keySpec = new SecretKeySpec( key, INSTANCE_NAME );
